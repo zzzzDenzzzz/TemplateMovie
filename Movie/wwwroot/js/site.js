@@ -38,7 +38,6 @@ $(window).scroll(async function () {
             let response = await fetch(`${url}&page=${page}`);
             let result = await response.text();
 
-
             $('.myList').append(result);
         }
 
