@@ -1,13 +1,12 @@
 using Movie.Extensions;
-using Movie.Options;
 using Movie.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMemoryCache();
 
-builder.Services.AddSingleton<IRecentMoiveStorage, RecentMoiveStorage>(); 
-builder.Services.AddControllersWithViews();   
+builder.Services.AddSingleton<IRecentMoiveStorage, RecentMoiveStorage>();
+builder.Services.AddControllersWithViews();
 
 builder.Services.AddMovieService(options =>
 {
@@ -16,9 +15,9 @@ builder.Services.AddMovieService(options =>
 });
 
 builder.Services.AddHttpClient();
- 
+
 var app = builder.Build();
- 
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

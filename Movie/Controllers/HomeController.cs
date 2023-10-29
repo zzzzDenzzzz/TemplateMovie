@@ -62,7 +62,7 @@ namespace Movie.Controllers
 
         public async Task<IActionResult> SearchResult(string title, int page = 1, int countViewPage = 4)
         {
-            SearchViewModel searchViewModel = new SearchViewModel();
+            SearchViewModel searchViewModel = new();
 
 
             try

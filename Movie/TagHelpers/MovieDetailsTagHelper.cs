@@ -61,7 +61,6 @@ namespace Movie.TagHelpers
             }
 
             output.Attributes.Add("href", url);
-
         }
     }
 }

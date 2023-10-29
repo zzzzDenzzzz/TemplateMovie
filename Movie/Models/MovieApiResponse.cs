@@ -15,8 +15,6 @@ namespace Movie.Models
         public int TotalResults { get => int.Parse(TotalResultsString); }
         public string Response { get; set; }
         public string Error { get; set; }
-
-        //ctrl + r + r
     }
 }
 
